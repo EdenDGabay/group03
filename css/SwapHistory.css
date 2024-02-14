@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    text-decoration: underline;
+}
+
+.swap-history {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.swap-history-header {
+    font-size: 30px;
+    color: #333;
+}
+
+.swap-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.swap-table thead {
+    background-color: #e8e8e8;
+}
+
+.swap-table thead th {
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    vertical-align: middle;
+}
+
+.swap-table tbody td {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    border-top: 1px solid #e8e8e8;
+    color: #666;
+    vertical-align: middle;
+}
+
+.swap-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.center-container {
+    text-align: center; /* Centers the button and form horizontally */
+}
+
+#addSwapButton {
+    padding: 15px 30px;
+    background-color: #76491b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px; /* Adjust this value as needed */
+    transition: background-color 0.3s ease;
+}
+
+#addSwapButton:hover {
+    background-color: #4f1f02;
+}
+
+#newSwapForm {
+    display: inline-block; /* Allows the form to be centered using text-align on the parent */
+    margin-top: 20px; /* Adjust this value as needed */
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+#newSwapForm input[type="text"],
+#newSwapForm input[type="date"],
+#newSwapForm input[type="email"],
+#newSwapForm input[type="password"] {
+    display: block; /* Stacks the input fields vertically */
+    width: 30%; /* Adjust the width to 50% or any other percentage you prefer */
+    margin: 10px auto; /* Keeps the fields centered and adds space between them */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#newSwapForm button {
+    display: block; /* Aligns the button with the input fields */
+    width: 30%; /* Make sure the button width matches the input fields width */
+    padding: 15px 20px;
+    background-color: #76491b;
+    font-family: 'Lexend', sans-serif;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px auto; /* Centers the button and adds space above and below */
+
+}
+
+#newSwapForm button:hover {
+    background-color: #4f1f02;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+footer {
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 20px 10%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-container p {
+    margin: 0;
+    color: #333;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

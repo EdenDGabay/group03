@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/LoginPage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Login Page</title>
+</head>
+<body>
+    <header>
+        <h1>BookHive</h1>
+        <nav>
+            <ul>
+                <li><a href="../Html/HomePage.html">Home</a></li>
+                <li><a href="../Html/UserProfile.html">Profile</a></li>
+                <li><a href="../Html/Chats.html">Chats</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="left-side">
+            <p class="text">BookHive</p>
+        </div>
+
+        <div class="right-side">
+            <h1>Welcome Back!</h1>
+            <h2 class="subheader">Sign in to access your account</h2>
+
+            <form id="loginForm">
+                <label for="email">Email address:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <a href="#" id="forgotPassword">Forgot Password?</a>
+
+                <button class="loginButton" type="submit">Log in</button>
+            </form>
+
+            <div class="signup">
+                <p>Don't have an account? <a href="SignUp.html" class="signup-link">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+
+        <footer>
+      <div class="footer-container">
+        <p>BookHive ©</p>
+        <p>Your Favorite Book Swapping Community Since 2024!</p>
+        <div class="footer-links">
+            <a href="../Html/Help.html">Help</a>
+            <a href="../Html/FAQ.html">FAQ</a>
+            <a href="../Html/ContactUs.html">Contact Us</a>
+        </div>
+     </div>
+    </footer>
+
+<script src="../JavaScript/LoginPage.js"></script>
+
+
+</body>
+</html>

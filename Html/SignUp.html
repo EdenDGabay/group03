@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/SignUp.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <title>Sign Up</title>
+</head>
+<body>
+    <header>
+        <h1>BookHive</h1>
+        <nav>
+            <ul>
+                <li><a href="../Html/HomePage.html">Home</a></li>
+                <li><a href="../Html/UserProfile.html">Profile</a></li>
+                <li><a href="../Html/Chats.html">Chats</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="signup-container">
+        <h2>Sign up</h2>
+        <p>Enter your details to continue</p>
+        <form id="signupForm">
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="date" id="birthdate" name="birthdate" placeholder="Birthdate" required>
+            <input type="password" id="password" name="password" placeholder="Create your password" required>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required>
+            <div class="terms">
+                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                <label for="agreeTerms">I agree with Terms and Privacy Policy.</label>
+            </div>
+            <button type="submit">Sign Up</button>
+            <p class="login-link">Already have an account? <a href="../Html/LoginPage.html">Log in</a></p>
+        </form>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <p>BookHive ©</p>
+        <p>Your Favorite Book Swapping Community Since 2024!</p>
+        <div class="footer-links">
+            <a href="../Html/Help.html">Help</a>
+            <a href="../Html/FAQ.html">FAQ</a>
+            <a href="../Html/ContactUs.html">Contact Us</a>
+        </div>
+     </div>
+    </footer>
+
+<script src="../JavaScript/SignUp.js"></script>
+
+
+</body>
+</html>

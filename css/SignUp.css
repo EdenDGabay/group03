@@ -1,0 +1,194 @@
+/* General reset and font import */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.main-content {
+    min-height: calc(100% - 40px);
+    padding-bottom: 40px;
+}
+
+/* Same footer styles as before */
+
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #76491b;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #4f1f02;
+}
+
+/* Signup container styles */
+.signup-container {
+    max-width: 500px; /* Increased width */
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.signup-container h2 {
+    font-size: 45px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.signup-container p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Form element styles */
+.signup-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Terms agreement styles */
+.terms {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.terms input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Button styles */
+button {
+    padding: 15px;
+    background-color: #76491b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: #4f1f02;
+}
+
+/* Link to login page styles */
+.login-link {
+    color: #76491b;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.login-link a {
+    color: #4f1f02;
+    text-decoration: underline;
+}
+
+.login-link a:hover {
+    color: #76491b;
+}
+
+
+footer {
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 20px 10%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-container p {
+    margin: 0;
+    color: #333;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+

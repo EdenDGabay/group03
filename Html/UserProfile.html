@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - BookHive</title>
+    <link rel="stylesheet" href="../css/UserProfile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>BookHive</h1>
+        <nav>
+            <ul>
+                <li><a href="../Html/HomePage.html">Home</a></li>
+                <li><a href="../Html/UserProfile.html">Profile</a></li>
+                <li><a href="../Html/Chats.html">Chats</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="profile-section">
+        <div class="profile-sidebar">
+            <div class="profile-picture">
+                <img src="../img/אני.jpg" alt="Eden Gabay">
+            </div>
+            <h2>Eden Gabay</h2>
+            <p>Tel Aviv, Israel</p>
+            <button class="edit-profile-button">Edit Profile</button>
+            <p class="about">Hello there! My name is Eden Gabay. I'm a student at BGU in Israel. I'm taking a course named 'Web' and this is part of my project. XOXO</p>
+            <button class="message-me-button">Message Me</button>
+        </div>
+        <div class="profile-main">
+
+            <ul class="tabs">
+                <li><a href="SwapHistory.html">Swap History</a></li>
+                <li><a href="Wishlist.html">Wishlist</a></li>
+            </ul>
+
+          <div class="swappable-books">
+             <h3>Books to Swap</h3>
+             <div id="booksToSwap" class="books-grid">
+             </div>
+          </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <p>BookHive ©</p>
+            <p>Your Favorite Book Swapping Community Since 2024!</p>
+            <div class="footer-links">
+                <a href="../Html/Help.html">Help</a>
+                <a href="../Html/FAQ.html">FAQ</a>
+                <a href="../Html/ContactUs.html">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+<script src="../JavaScript/Books.js"></script>
+<script src="../JavaScript/UserProfile.js"></script>
+<script src="../JavaScript/HomePage.js"></script>
+
+</body>
+</html>

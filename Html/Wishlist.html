@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookHive Wishlist</title>
+  <link rel="stylesheet" href="../css/Wishlist.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>BookHive</h1>
+     <nav>
+       <ul>
+         <li><a href="HomePage.html">Home</a></li>
+         <li><a href="UserProfile.html">Profile</a></li>
+         <li><a href="Chats.html">Chats</a></li>
+       </ul>
+     </nav>
+  </header>
+
+  <main>
+    <h2>Wishlist</h2>
+    <section id="wishlist" class="wishlist">
+
+       <div class="book">
+        <img src="../img/Memories of a Geisha.jpg" alt="Memoirs of a Geisha" class="book-cover">
+        <div class="book-info">
+          <h3 class="book-title">Memoirs of a Geisha</h3>
+          <p class="book-author">Arthur Golden</p>
+        </div>
+       </div>
+
+      <div class="book">
+        <img src="../img/Angels%20&%20Demons.jpg" alt="Angels & Demons" class = "book-cover">
+        <div class = "book-info">
+          <h3 class ="book-title">Angels & Demons</h3>
+          <p class = "book-author">Dan Brown</p>
+        </div>
+      </div>
+
+        <div class="book">
+        <img src="../img/The%20Fever%20Code.jpg" alt="The Fever Code" class = "book-cover">
+        <div class = "book-info">
+          <h3 class ="book-title">The Fever Code</h3>
+          <p class = "book-author">James Dashner</p>
+        </div>
+      </div>
+
+      <div class="book">
+        <img src="../img/Shutter%20Island.jpg" alt="Shutter Island" class = "book-cover">
+        <div class = "book-info">
+          <h3 class ="book-title">Shutter Island</h3>
+          <p class = "book-author">Dennis Lehane</p>
+        </div>
+      </div>
+
+
+      <div class="book">
+        <img src="../img/A%20Song%20of%20Ice%20and%20Fire.jpg" alt="A Song of Ice and Fire" class = "book-cover">
+        <div class = "book-info">
+          <h3 class ="book-title">A Song of Ice and Fire</h3>
+          <p class = "book-author">George R.R. Martin</p>
+        </div>
+      </div>
+
+      <div class="book">
+        <img src="../img/Harry%20Potter%20and%20the%20Goblet%20of%20Fire.jpg" alt="Harry Potter and the Goblet of Fire" class = "book-cover">
+        <div class = "book-info">
+          <h3 class ="book-title">Harry Potter and the Goblet of Fire</h3>
+          <p class = "book-author">J.K. Rowling</p>
+        </div>
+      </div>
+
+      <div class="book">
+        <img src="../img/Mockingjay.jpg" alt="Mockingjay" class = "book-cover">
+        <div class = "book-info">
+          <h3 class ="book-title">Mockingjay</h3>
+          <p class = "book-author">Suzanne Collins</p>
+        </div>
+      </div>
+
+      <div class="book">
+        <img src="../img/Steve%20Jobs.jpg" alt="Steve Jobs" class = "book-cover">
+        <div class = "book-info">
+          <h3 class ="book-title">Steve Jobs</h3>
+          <p class = "book-author">Walter Isaacson</p>
+        </div>
+      </div>
+
+        <div class="book">
+        <img src="../img/The%20Diary%20of%20a%20Young%20Girl.jpg" alt="The Diary of a Young Girl" class = "book-cover">
+        <div class = "book-info">
+          <h3 class ="book-title">The Diary of a Young Girl</h3>
+          <p class = "book-author">Anne Frank</p>
+        </div>
+      </div>
+
+     </section>
+    <div class="center-container">
+        <button id="showAddBookForm">Add Book to Wishlist</button>
+        <form id="addBookForm" style="display:none;">
+            <input type="text" id="bookTitle" placeholder="Book Title" required>
+            <input type="text" id="bookAuthor" placeholder="Author Name" required>
+            <input type="text" id="bookCover" placeholder="Cover Image URL" required>
+            <button type="submit">Add Book</button>
+        </form>
+    </div>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <p>BookHive ©</p>
+        <p>Your Favorite Book Swapping Community Since 2024!</p>
+        <div class="footer-links">
+            <a href="../Html/Help.html">Help</a>
+            <a href="../Html/FAQ.html">FAQ</a>
+            <a href="../Html/ContactUs.html">Contact Us</a>
+        </div>
+     </div>
+    </footer>
+
+<script src="../JavaScript/Books.js"></script>
+<script src="../JavaScript/Wishlist.js"></script>
+
+  </body>
+</html>

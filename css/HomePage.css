@@ -1,0 +1,223 @@
+/* CSS for search suggestions */
+.search-suggestions {
+    display: none; /* Hide the search results container by default */
+    position: absolute;
+    top: calc(100% + 5px); /* Position the search results below the search box */
+    left: 0;
+    right: 0;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center; /* Center-align the search results */
+    z-index: 2; /* Ensure search suggestions appear above other elements */
+}
+
+.search-result-link {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    text-decoration: none;
+}
+
+.search-result-link:hover {
+    text-decoration: underline;
+}
+
+/* Your existing CSS styles can go here */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #76491b;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #4f1f02;
+}
+
+.headline-container {
+    text-align: center;
+    background-color: #E8C2A2;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.headline {
+    font-size: 48px;
+    color: #333;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    position: relative; /* Ensure proper positioning of the search suggestions */
+}
+
+#search-box {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-family: 'Lexend', sans-serif;
+}
+
+#search-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #D2B48C;
+    color: black;
+    border-radius: 0 5px 5px 0;
+    font-family: 'Lexend', sans-serif;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000;
+}
+
+.category-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#mystery {
+    background-image: url('../img/MysteryCategory.jpg');
+}
+
+#fantasy {
+    background-image: url('../img/FantasyCategory.jpg');
+}
+
+#biography {
+    background-image: url('../img/BiographyCategory.jpg');
+}
+
+#horror {
+    background-image: url('../img/HorrorCategory.jpg');
+}
+
+#romance {
+    background-image: url('../img/RomanceCaregory.jpeg');
+}
+
+#comedy {
+    background-image: url('../img/ComedyCategory.jpg');
+}
+
+#adventure {
+    background-image: url('../img/AdventureCategory.jpg');
+}
+
+#scienceFiction {
+    background-image: url('../img/ScienceFictionCategory.jpg');
+}
+
+#history {
+    background-image: url('../img/HistoryCategory.png');
+}
+
+footer {
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 20px 10%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-container p {
+    margin: 0;
+    color: #333;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 40px;
+  font-weight: bold;
+    color: #000000;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* White text */
+    background-color: #76491b; /* Brown background */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px; /* Size of the text */
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #4f1f02; /* Darker brown on hover/focus */
+}
+
+main {
+    padding: 20px;
+    min-height: 70vh; /* Adjust height as per content */
+}
+
+main h2 {
+    text-align: Center;
+    font-size: 60px;
+    margin: 20px 0;
+    color: #000000;
+    background-color: #e7c0aa;
+
+}
+
+.wishlist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for the books */
+    gap: 20px;
+    padding: 20px;
+}
+
+.book {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.book-cover {
+  width: 250px;
+  height: 400px;
+}
+
+
+.book-info {
+  padding: 10px;
+}
+
+.book-title {
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.book-author {
+  font-size: 20px;
+  color: #693b22;
+}
+
+
+@media (max-width: 768px) {
+    .wishlist {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .wishlist {
+        grid-template-columns: 1fr; /* 1 column for mobile screens */
+    }
+}
+
+.center-container {
+    text-align: center;
+    padding: 20px;
+}
+
+#showAddBookForm {
+    padding: 10px 20px;
+    background-color: #76491b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px; /* Adjust based on your layout */
+    transition: background-color 0.3s ease;
+}
+
+#showAddBookForm:hover {
+    background-color: #4f1f02;
+}
+
+#addBookForm {
+    display: none; /* Hidden by default, will be displayed when the button is clicked */
+    margin-top: 20px;
+}
+
+#addBookForm input[type="text"],
+#addBookForm button[type="submit"] {
+    width: 35%; /* Adjust width as needed */
+    padding: 10px;
+    margin: 10px auto; /* Centers the input fields */
+    display: block; /* Stack elements vertically */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#addBookForm button[type="submit"] {
+    background-color: #76491b;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 35%;
+}
+
+#addBookForm button[type="submit"]:hover {
+    background-color: #4f1f02;
+}
+
+
+footer {
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 20px 10%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-container p {
+    margin: 0;
+    color: #333;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
