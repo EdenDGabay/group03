@@ -6,7 +6,7 @@ function Book(title, author, category, description, imageSrc, altText) {
     this.imageSrc = imageSrc;
     this.altText = altText;
 }
-
+//check
 // Example Book instance creation
 let exampleBook = new Book(
   "The Great Escape",
