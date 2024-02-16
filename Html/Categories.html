@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categories - Book Swap</title>
-    <link rel="stylesheet" href="../css/Categories.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookHive Categories</title>
+  <link rel="stylesheet" href="../css/Categories.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1 id="categoryTitle">Category: Loading...</h1>
-    <div id="booksContainer"></div>
+  <header>
+    <h1>BookHive</h1>
+    <nav>
+      <ul>
+        <li><a href="HomePage.html">Home</a></li>
+        <li><a href="UserProfile.html">Profile</a></li>
+        <li><a href="Chats.html">Chats</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <script src="../JavaScript/Books.js"></script>
-    <script src="../JavaScript/Categories.js"></script>
+  <main>
+    <h2 id="categoryTitle">Categories</h2>
+    <section id="categoryBooks" class="wishlist">
+      <!-- Books will be dynamically inserted here -->
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p>BookHive ©</p>
+      <p>Your Favorite Book Swapping Community Since 2024!</p>
+      <div class="footer-links">
+        <a href="../Html/Help.html">Help</a>
+        <a href="../Html/FAQ.html">FAQ</a>
+        <a href="../Html/ContactUs.html">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+<script src="../JavaScript/Categories.js"></script>
+<script src="../JavaScript/Books.js"></script> <!-- Assuming the Books.js file is needed for book data -->
 </body>
 </html>
