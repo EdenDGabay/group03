@@ -11,7 +11,6 @@ body {
     line-height: 1.6;
 }
 
-/* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -27,7 +26,6 @@ header h1 {
     color: #000000;
 }
 
-/* Navigation Styles */
 nav ul {
     list-style: none;
 }
@@ -39,12 +37,12 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff; /* White text */
-    background-color: #76491b; /* Brown background */
+    color: #fff;
+    background-color: #76491b;
     padding: 10px 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    font-size: 16px; /* Size of the text */
+    font-size: 16px;
 }
 
 nav ul li a:hover,
@@ -52,7 +50,6 @@ nav ul li a:focus {
     background-color: #4f1f02;
 }
 
-/* Main Content Styles */
 main {
     padding: 20px;
     min-height: 70vh;
@@ -104,11 +101,11 @@ main h2 {
 
 @media (max-width: 1024px) {
     .wishlist {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     main h2 {
-        font-size: 3vw; /* Adjusting heading size based on viewport width */
+        font-size: 3vw;
     }
 }
 
@@ -124,21 +121,21 @@ main h2 {
     }
 
     .wishlist {
-        grid-template-columns: repeat(2, 1fr); /* Adjusted for clarity */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .book-title {
-        font-size: min(max(18px, 4vw), 22px); /* Responsive font size with limits */
+        font-size: min(max(18px, 4vw), 22px);
     }
 
     .book-author {
-        font-size: min(max(16px, 3.5vw), 20px); /* Responsive font size with limits */
+        font-size: min(max(16px, 3.5vw), 20px);
     }
 }
 
 @media (max-width: 480px) {
     .wishlist {
-        grid-template-columns: 1fr; /* 1 column for very small screens */
+        grid-template-columns: 1fr;
     }
 
     header, nav ul li a, .book-title, .book-author {
@@ -150,7 +147,6 @@ main h2 {
     }
 }
 
-/* Footer Styles */
 footer {
     width: 100%;
     background-color: #f7f7f7;

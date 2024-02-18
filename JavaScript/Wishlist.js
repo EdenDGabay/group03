@@ -1,14 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Show the form when the "Add to Wishlist" button is clicked
     document.getElementById('showAddBookForm').addEventListener('click', function() {
         document.getElementById('addBookForm').style.display = 'block';
     });
 
     document.getElementById('addBookForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the form from submitting in the traditional way
+        event.preventDefault();
 
-        if (validateFormFields()) { // Perform validation
-            addBookToWishlist(); // Add book to wishlist if validation passes
+        if (validateFormFields()) {
+            addBookToWishlist();
         }
     });
 });

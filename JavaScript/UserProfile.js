@@ -82,8 +82,8 @@ function createBookHTML(book) {
     authorP.textContent = book.author;
 
     let detailsButton = document.createElement('a');
-    detailsButton.className = 'details-button'; // Reuse the class for styling buttons
-    detailsButton.href = 'BookDetailsPage.html'; // The link to your Book Details page
+    detailsButton.className = 'details-button';
+    detailsButton.href = 'BookDetailsPage.html';
     detailsButton.textContent = 'Book Details';
 
     bookDiv.appendChild(img);

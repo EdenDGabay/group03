@@ -14,12 +14,11 @@ body, input, button, a {
     font-family: 'Lexend', sans-serif;
 }
 
-/* Header styles */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%; /* Adjusted padding for responsiveness */
+    padding: 20px 5%;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 100%;
@@ -27,7 +26,7 @@ header {
 }
 
 header h1 {
-    font-size: calc(1.5rem + 1vw); /* Slightly responsive font size */
+    font-size: calc(1.5rem + 1vw);
     font-weight: bold;
     color: #000000;
 }
@@ -56,42 +55,40 @@ nav ul li a:focus {
     background-color: #4f1f02;
 }
 
-/* Container styles */
 .container {
     width: 100%;
     max-width: 1200px;
     margin: auto;
     display: flex;
-    justify-content: center; /* Centering content */
+    justify-content: center;
     box-shadow: none;
 }
 
-/* Left side styles */
+
 .left-side {
     flex: 1;
     background-image: url('../img/BooksLogin.png');
     background-size: cover;
     background-position: center;
-    min-width: 50%; /* Maintain minimum width */
+    min-width: 50%;
 }
 
-/* Hide the white BookHive text */
+
 .left-side .text {
     display: none;
 }
 
-/* Right side styles */
 .right-side {
-    flex: 1; /* Adjusted to maintain equal width with left side */
-    padding: 40px; /* Adjusted padding for responsiveness */
+    flex: 1;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 50%; /* Maintain maximum width */
+    max-width: 50%;
 }
 
 .right-side h1 {
-    font-size: calc(2rem + 1vw); /* Slightly responsive font size */
+    font-size: calc(2rem + 1vw);
     font-weight: bold;
     color: #080a0b;
     text-align: center;
@@ -100,14 +97,13 @@ nav ul li a:focus {
 
 .right-side h2.subheader {
     text-align: center;
-    font-size: calc(0.8rem + 0.5vw); /* Slightly responsive font size */
+    font-size: calc(0.8rem + 0.5vw);
     color: #555;
     font-weight: lighter;
     margin-top: 0;
     margin-bottom: 20px;
 }
 
-/* Form styles */
 form {
     display: flex;
     flex-direction: column;
@@ -136,14 +132,13 @@ button.loginButton {
     background-color: #76491b;
     color: #fff;
     padding: 15px;
-    font-size: calc(0.8rem + 0.5vw); /* Slightly responsive font size */
+    font-size: calc(0.8rem + 0.5vw);
     margin-top: 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-/* Sign up link styles */
 .signup {
     text-align: center;
     margin-top: 20px;
@@ -151,7 +146,7 @@ button.loginButton {
 
 .signup p {
     color: #555;
-    font-size: calc(0.8rem + 0.2vw); /* Slightly responsive font size */
+    font-size: calc(0.8rem + 0.2vw);
 }
 
 .signup-link {
@@ -163,12 +158,12 @@ button.loginButton {
 footer {
     width: 100%;
     background-color: #f7f7f7;
-    padding: 20px 5%; /* Adjusted padding for responsiveness */
+    padding: 20px 5%;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: calc(0.8rem + 0.2vw); /* Slightly responsive font size */
+    font-size: calc(0.8rem + 0.2vw);
 }
 
 .footer-container {

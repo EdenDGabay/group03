@@ -2,17 +2,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const loginForm = document.getElementById("loginForm");
 
     loginForm.addEventListener("submit", function(e) {
-        e.preventDefault(); // Prevent the form from submitting
+        e.preventDefault();
 
-        // Dugma Le User Tikni Bishvil Ha Hadgma.
         const users = [
-            { email: "user@gmail.com", password: "123456" } // Add more user objects as needed
+            { email: "user@gmail.com", password: "123456" }
         ];
 
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
-        // Check if email and password match any user (simple simulation)
         const userExists = users.some(user => user.email === email && user.password === password);
 
         if (!validateEmail(email) || !userExists) {
@@ -24,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 setTimeout(() => {
                     loginForm.removeChild(errorMessage);
-                }, 5000); // Remove error message after 5 seconds
-            }, 2000); // Display error message after 2 seconds
+                }, 5000);
+            }, 2000);
             return false;
         }
 

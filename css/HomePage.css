@@ -1,15 +1,15 @@
 .search-suggestions {
-    display: none; /* Hide the search results container by default */
+    display: none;
     position: absolute;
-    top: calc(100% + 5px); /* Position the search results below the search box */
+    top: calc(100% + 5px);
     left: 0;
     right: 0;
     background-color: #f9f9f9;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    text-align: center; /* Center-align the search results */
-    z-index: 2; /* Ensure search suggestions appear above other elements */
+    text-align: center;
+    z-index: 2;
 }
 
 .search-result-link {
@@ -33,13 +33,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%; /* Adjusted back to fixed padding for consistency */
+    padding: 20px 10%;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header h1 {
-    font-size: calc(1.25rem + 1vw); /* Slightly reduced scaling effect */
+    font-size: calc(1.25rem + 1vw);
     font-weight: bold;
     color: #000000;
 }
@@ -50,17 +50,17 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-left: 20px; /* Kept margin fixed for more consistent spacing */
+    margin-left: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
     background-color: #76491b;
-    padding: 10px 15px; /* Reverted to fixed padding to control button size */
+    padding: 10px 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    font-size: 16px; /* Kept font size fixed for consistency */
+    font-size: 16px;
 }
 
 nav ul li a:hover,
@@ -104,7 +104,7 @@ nav ul li a:focus {
     border: 2px solid #ddd;
     border-radius: 5px 0 0 5px;
     font-family: 'Lexend', sans-serif;
-    width: auto; /* Ensure the search box takes only the necessary space */
+    width: auto;
 }
 
 #search-button {
@@ -120,23 +120,23 @@ nav ul li a:focus {
 
 @media (max-width: 768px) {
     .search-container {
-        flex-direction: column; /* Stack search box and button vertically */
-        align-items: center; /* Center-align the items */
+        flex-direction: column;
+        align-items: center;
     }
 
     #search-box, #search-button {
-        width: 90%; /* Make the search box and button take up most of the screen width */
-        border-radius: 5px; /* Adjust border-radius for aesthetics */
-        margin: 5px 0; /* Add some margin between the stacked elements */
+        width: 90%;
+        border-radius: 5px;
+        margin: 5px 0;
     }
 }
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); /* Adjust based on your design preference */
-    gap: 20px; /* Increase gap for better spacing */
-    padding: 40px; /* Add padding for better look on small screens */
-    margin: 0 auto; /* Center the grid */
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -147,7 +147,7 @@ nav ul li a:focus {
 
 @media (max-width: 480px) {
     .category-grid {
-        grid-template-columns: 1fr; /* Stack items vertically on very small screens */
+        grid-template-columns: 1fr;
     }
 }
 

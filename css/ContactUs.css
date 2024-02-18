@@ -115,7 +115,7 @@ nav ul li a:focus {
 .contact-form button {
     background-color: #76491b;
     color: #fff;
-    padding: 15px 30px; /* Adjusted padding */
+    padding: 15px 30px;
     font-size: 18px;
     border: none;
     border-radius: 5px;
@@ -128,7 +128,6 @@ nav ul li a:focus {
     background-color: #4f1f02;
 }
 
-/* Footer styles */
 footer {
     width: 100%;
     background-color: #f7f7f7;

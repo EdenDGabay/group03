@@ -6,8 +6,7 @@ function Book(title, author, category, description, imageSrc, altText) {
     this.imageSrc = imageSrc;
     this.altText = altText;
 }
-//check
-// Example Book instance creation
+
 let exampleBook = new Book(
   "The Great Escape",
   "Paul Brickhill",
@@ -17,25 +16,21 @@ let exampleBook = new Book(
   "Cover image of The Great Escape"
 );
 
-// Initialize wishlistBooks array
+
 let wishlistBooks = [];
 
-// Initialize swappableBooks array - Declaration moved here to ensure it's only declared once
 let swappableBooks = [
   {title: "Rich Dad Poor Dad", author: "Robert T. Kiyosaki", category: "Finance", cover: "../img/RichDadPoorDadBook.jpg"},
   {title: "The Butterfly Effect", author: "Andy Andrews", category: "Self-help", cover: "../img/TheButterflyEffectBook.jpg"},
   {title: "Eragon", author: "Christopher Paolini", category: "Fantasy", cover: "../img/EragonBook.jpg"}
 ];
 
-// Function to create and return a book HTML element
 function createBookHTML(book) {
     let bookDiv = document.createElement('div');
     bookDiv.className = 'book';
-    // Other element creation and setup...
     return bookDiv;
 }
 
-// Function to render all books on the wishlist
 function renderWishlist() {
     let wishlistSection = document.getElementById('wishlist');
     wishlistBooks.forEach(function(book) {
@@ -43,14 +38,11 @@ function renderWishlist() {
     });
 }
 
-// Function to create and return a book item HTML element for swappable books
 function createBookItem(book) {
     let div = document.createElement('div');
-    // Other element creation and setup...
     return div;
 }
 
-// Function to render user's swappable books
 function renderSwappableBooks() {
     const booksGrid = document.getElementById('booksToSwap');
     if (!booksGrid) {
@@ -62,12 +54,10 @@ function renderSwappableBooks() {
     });
 }
 
-// DOMContentLoaded listeners combined to ensure streamlined execution
 document.addEventListener("DOMContentLoaded", function() {
     renderWishlist();
     renderSwappableBooks();
 
-    // Assuming exampleBook or another book object is to be displayed somewhere specifically
     if (document.getElementById('bookImage')) {
         document.getElementById('bookImage').src = exampleBook.imageSrc;
         document.getElementById('bookImage').alt = exampleBook.altText;

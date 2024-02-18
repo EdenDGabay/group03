@@ -9,10 +9,9 @@ body {
     line-height: 1.6;
     color: #333;
     background: #f4f4f4;
-    padding-bottom: 50px; /* Space for footer */
+    padding-bottom: 50px;
 }
 
-/* Header styles */
 header {
     display: flex;
     justify-content: space-between;
