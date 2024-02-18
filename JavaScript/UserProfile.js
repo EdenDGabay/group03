@@ -1,27 +1,24 @@
-
-function addSwap() {
-    let booksSwapped = JSON.parse(localStorage.getItem('booksSwapped')) || [];
-    // Logic to add a book to the swapped books array
-    // For example:
-    // booksSwapped.push(book);
-    localStorage.setItem('booksSwapped', JSON.stringify(booksSwapped));
-}
-
-// Function to increment the "Wishlist" count
-function addWishlist() {
-    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-    // Logic to add a book to the wishlist array
-    // For example:
-    // wishlist.push(book);
-    localStorage.setItem('wishlist', JSON.stringify(wishlist));
-}
-
 document.addEventListener("DOMContentLoaded", function() {
     renderSwappableBooks();
+
+    const addBookButton = document.getElementById('showAddBookForm');
+    const addBookForm = document.getElementById('addBookForm');
+
+    addBookButton.addEventListener('click', () => {
+        if (addBookForm.style.display === 'none') {
+            addBookForm.style.display = 'block';
+        } else {
+            addBookForm.style.display = 'none';
+        }
+    });
+
+    addBookForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        addBookToSwaplist();
+    });
 });
 
 function renderSwappableBooks() {
-    // Assuming 'swappableBooks' is the key for the books data in localStorage
     let swappableBooks = JSON.parse(localStorage.getItem('swappableBooks')) || [];
 
     const booksGrid = document.getElementById('booksToSwap');
@@ -30,9 +27,46 @@ function renderSwappableBooks() {
     });
 }
 
+function addBookToSwaplist() {
+    const title = document.getElementById('bookTitle').value;
+    const author = document.getElementById('bookAuthor').value;
+    const coverUrl = document.getElementById('bookCover').value || '';
+
+    if (!isValidUrl(coverUrl)) {
+        alert('Please enter a valid URL for the book cover image.');
+        return;
+    }
+
+    const newBookHtml = `
+        <div class="book">
+            <img src="${coverUrl}" alt="${title}" class="book-cover">
+            <div class="book-info">
+                <h3 class="book-title">${title}</h3>
+                <p class="book-author">${author}</p>
+                <a href="BookDetails.html" class="details-button">Book Details</a>
+            </div>
+        </div>
+    `;
+
+    const booksGrid = document.getElementById('booksToSwap');
+    booksGrid.innerHTML += newBookHtml;
+
+    document.getElementById('bookTitle').value = '';
+    document.getElementById('bookAuthor').value = '';
+    document.getElementById('bookCover').value = '';
+    document.getElementById('addBookForm').style.display = 'none';
+
+    const addBookMessage = document.getElementById('addBookMessage');
+    addBookMessage.style.display = 'block';
+
+    setTimeout(function() {
+        addBookMessage.style.display = 'none';
+    }, 5000);
+}
+
 function createBookHTML(book) {
     let bookDiv = document.createElement('div');
-    bookDiv.className = 'book-item'; // Assuming this is the class for styling book items
+    bookDiv.className = 'book-item';
 
     let img = document.createElement('img');
     img.src = book.imageSrc;
@@ -52,12 +86,19 @@ function createBookHTML(book) {
     detailsButton.href = 'BookDetailsPage.html'; // The link to your Book Details page
     detailsButton.textContent = 'Book Details';
 
-    // Append the new elements to the bookDiv
     bookDiv.appendChild(img);
     bookDiv.appendChild(titleH3);
     bookDiv.appendChild(authorP);
-    bookDiv.appendChild(detailsButton); // Add the details button to each book
+    bookDiv.appendChild(detailsButton);
 
     return bookDiv;
 }
 
+function isValidUrl(url) {
+    try {
+        new URL(url);
+        return true;
+    } catch (_) {
+        return false;
+    }
+}
