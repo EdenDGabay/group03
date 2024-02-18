@@ -9,41 +9,32 @@
 </head>
 <body>
 
-  <header>
-    <h1>BookHive</h1>
-      <nav>
-       <ul>
-        <li><a href="HomePage.html">Home</a></li>
-         <li><a href="UserProfile.html">Profile</a></li>
-         <li><a href="Chats.html">Chats</a></li>
-      </ul>
-    </nav>
-  </header>
-
+<header>
+  <h1>BookHive</h1>
+  <nav>
+    <ul>
+      <li><a href="HomePage.html">Home</a></li>
+      <li><a href="UserProfile.html">Profile</a></li>
+      <li><a href="Chats.html">Chats</a></li>
+    </ul>
+  </nav>
+</header>
 
 <div class="container">
   <aside class="sidebar">
-    <div class="header">Book Swappers</div>
-    <nav class="navigation">
-      <a href="#" class="nav-link">Bob</a>
-      <a href="#" class="nav-link active">Eden</a>
-      <a href="#" class="nav-link">Bob</a>
-      <a href="#" class="nav-link">Bob</a>
-      <a href="#" class="nav-link">Bob</a>
-      <a href="#" class="nav-link">Bob</a>
-      <a href="#" class="nav-link">Bob</a>
-      <a href="#" class="nav-link">Bob</a>
-    </nav>
+    <!-- Dynamic content will be injected here by the JavaScript -->
   </aside>
 
   <section class="chat">
     <header class="chat-header">
-      <h1>Eden</h1>
+      <h1 id="selected-user-name">Chat</h1>
       <p>Let's talk books!</p>
     </header>
+
     <ul class="message-list">
-      <!-- Messages will go here -->
+      <!-- Messages will be injected here by JavaScript -->
     </ul>
+
     <footer class="chat-footer">
       <input type="text" class="message-input" placeholder="Type a new message...">
       <button class="send-button">Send</button>
@@ -56,13 +47,14 @@
     <p>BookHive ©</p>
     <p>Your Favorite Book Swapping Community Since 2024!</p>
     <div class="footer-links">
-        <a href="../Html/Help.html">Help</a>
-        <a href="../Html/FAQ.html">FAQ</a>
-        <a href="../Html/ContactUs.html">Contact Us</a>
+      <a href="../Html/Help.html">Help</a>
+      <a href="../Html/FAQ.html">FAQ</a>
+      <a href="../Html/ContactUs.html">Contact Us</a>
     </div>
- </div>
+  </div>
 </footer>
 
+<script src="../JavaScript/Chats.js"></script>
 
 </body>
 </html>
