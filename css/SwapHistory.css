@@ -5,24 +5,22 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
     font-family: 'Lexend', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-    padding: 20px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
+    padding: 20px 10%; /* Adjusted back to fixed padding for consistency */
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header h1 {
-    font-size: 40px;
+    font-size: calc(1.25rem + 1vw); /* Slightly reduced scaling effect */
     font-weight: bold;
     color: #000000;
 }
@@ -33,21 +31,22 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-left: 20px;
+    margin-left: 20px; /* Kept margin fixed for more consistent spacing */
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
-    padding: 10px 15px;
+    color: #fff;
+    background-color: #76491b;
+    padding: 10px 15px; /* Reverted to fixed padding to control button size */
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    font-size: 16px;
+    font-size: 16px; /* Kept font size fixed for consistency */
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-    text-decoration: underline;
+    background-color: #4f1f02;
 }
 
 .swap-history {
@@ -203,4 +202,45 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+    /* Adjust table and form layout for smaller desktops and tablets */
+    #newSwapForm input[type="text"], #newSwapForm input[type="date"],
+    #newSwapForm input[type="email"], #newSwapForm input[type="password"],
+    #newSwapForm button {
+        width: 50%; /* Increase width for better usability on smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjustments for mobile devices */
+    .swap-table, #newSwapForm {
+        width: 100%; /* Ensure table and form use available screen width */
+    }
+
+    .swap-table tbody td, .swap-table thead th {
+        padding: 10px; /* Reduce padding to accommodate smaller screen sizes */
+        font-size: 12px; /* Reduce font size for table content to prevent overflow */
+    }
+
+    #newSwapForm input[type="text"], #newSwapForm input[type="date"],
+    #newSwapForm input[type="email"], #newSwapForm input[type="password"],
+    #newSwapForm button {
+        width: 80%; /* Further increase width for form elements on very small screens */
+        margin: 10px auto; /* Ensure consistent margin around form elements */
+        padding: 10px; /* Adjust padding for better touch targets */
+    }
+
+    header {
+        flex-direction: column; /* Stack header elements vertically */
+    }
+
+    nav ul li {
+        margin-top: 10px; /* Add space between nav items when stacked */
+    }
+
+    #addSwapButton, #newSwapForm button {
+        font-size: 14px; /* Adjust button font size for smaller screens */
+    }
 }

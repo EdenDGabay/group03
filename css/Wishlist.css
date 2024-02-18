@@ -1,3 +1,4 @@
+/* General reset and font import */
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +12,7 @@ body {
     line-height: 1.6;
 }
 
+/* Header styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -22,7 +24,7 @@ header {
 
 header h1 {
     font-size: 40px;
-  font-weight: bold;
+    font-weight: bold;
     color: #000000;
 }
 
@@ -50,20 +52,21 @@ nav ul li a:focus {
     background-color: #4f1f02; /* Darker brown on hover/focus */
 }
 
+/* Main content styles */
 main {
     padding: 20px;
     min-height: 70vh; /* Adjust height as per content */
 }
 
 main h2 {
-    text-align: Center;
+    text-align: center;
     font-size: 60px;
     margin: 20px 0;
     color: #000000;
     background-color: #e7c0aa;
-
 }
 
+/* Wishlist grid */
 .wishlist {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns for the books */
@@ -81,26 +84,41 @@ main h2 {
 }
 
 .book-cover {
-  width: 250px;
-  height: 400px;
+    width: 250px;
+    height: 400px;
 }
 
-
 .book-info {
-  padding: 10px;
+    padding: 10px;
 }
 
 .book-title {
-  font-size: 25px;
-  margin-top: 10px;
+    font-size: 25px;
+    margin-top: 10px;
 }
 
 .book-author {
-  font-size: 20px;
-  color: #693b22;
+    font-size: 20px;
+    color: #693b22;
 }
 
+.details-button {
+    display: inline-block;
+    background-color: #76491b; /* Or any other color that fits your design */
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px; /* Adjust the margin as needed */
+    font-size: 14px; /* Adjust font size as needed */
+    transition: background-color 0.3s ease;
+}
 
+.details-button:hover {
+    background-color: #4f1f02; /* Darker shade for hover/focus states */
+}
+
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
     .wishlist {
         grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
@@ -113,6 +131,7 @@ main h2 {
     }
 }
 
+/* Form and button styles */
 .center-container {
     text-align: center;
     padding: 20px;
@@ -161,7 +180,7 @@ main h2 {
     background-color: #4f1f02;
 }
 
-
+/* Footer styles */
 footer {
     width: 100%;
     background-color: #f7f7f7;
@@ -194,7 +213,6 @@ footer {
 .footer-links a:hover {
     text-decoration: underline;
 }
-
 
 a {
     color: #333;

@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
 }
 
+/* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -26,6 +27,7 @@ header h1 {
     color: #000000;
 }
 
+/* Navigation Styles */
 nav ul {
     list-style: none;
 }
@@ -47,16 +49,17 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a:focus {
-    background-color: #4f1f02; /* Darker brown on hover/focus */
+    background-color: #4f1f02;
 }
 
+/* Main Content Styles */
 main {
     padding: 20px;
-    min-height: 70vh; /* Adjust height as per content */
+    min-height: 70vh;
 }
 
 main h2 {
-    text-align: Center;
+    text-align: center;
     font-size: 60px;
     margin: 20px 0;
     color: #000000;
@@ -65,7 +68,7 @@ main h2 {
 
 .wishlist {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for the books */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
 }
@@ -80,36 +83,74 @@ main h2 {
 }
 
 .book-cover {
-  width: 250px;
-  height: 400px;
+    width: 65%;
+    height: auto;
 }
 
 .book-info {
-  padding: 10px;
+    padding: 10px;
 }
 
 .book-title {
-  font-size: 25px;
-  margin-top: 10px;
+    font-size: 25px;
+    margin-top: 10px;
 }
 
 .book-author {
-  font-size: 20px;
-  color: #693b22;
+    font-size: 20px;
+    color: #693b22;
+}
+
+
+@media (max-width: 1024px) {
+    .wishlist {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+
+    main h2 {
+        font-size: 3vw; /* Adjusting heading size based on viewport width */
+    }
 }
 
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
     .wishlist {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+        grid-template-columns: repeat(2, 1fr); /* Adjusted for clarity */
+    }
+
+    .book-title {
+        font-size: min(max(18px, 4vw), 22px); /* Responsive font size with limits */
+    }
+
+    .book-author {
+        font-size: min(max(16px, 3.5vw), 20px); /* Responsive font size with limits */
     }
 }
 
 @media (max-width: 480px) {
     .wishlist {
-        grid-template-columns: 1fr; /* 1 column for mobile screens */
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+
+    header, nav ul li a, .book-title, .book-author {
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
     }
 }
 
+/* Footer Styles */
 footer {
     width: 100%;
     background-color: #f7f7f7;
@@ -128,21 +169,20 @@ footer {
     width: 100%;
 }
 
-.footer-container p {
+.footer-container p,
+.footer-links a {
     margin: 0;
     color: #333;
 }
 
 .footer-links a {
     text-decoration: none;
-    color: #333;
     margin-left: 20px;
 }
 
 .footer-links a:hover {
     text-decoration: underline;
 }
-
 
 a {
     color: #333;

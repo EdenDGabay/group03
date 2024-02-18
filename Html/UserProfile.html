@@ -9,55 +9,69 @@
 </head>
 <body>
 
-    <header>
-        <h1>BookHive</h1>
-        <nav>
-            <ul>
-                <li><a href="../Html/HomePage.html">Home</a></li>
-                <li><a href="../Html/UserProfile.html">Profile</a></li>
-                <li><a href="../Html/Chats.html">Chats</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <h1>BookHive</h1>
+    <nav>
+        <ul>
+            <li><a href="../Html/HomePage.html">Home</a></li>
+            <li><a href="../Html/UserProfile.html">Profile</a></li>
+            <li><a href="../Html/Chats.html">Chats</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <section class="profile-section">
-        <div class="profile-sidebar">
-            <div class="profile-picture">
-                <img src="../img/אני.jpg" alt="Eden Gabay">
+<section class="profile-section">
+    <div class="profile-sidebar">
+        <div class="profile-picture">
+            <img src="../img/אני.jpg" alt="Eden Gabay">
+        </div>
+        <h2>Eden Gabay</h2>
+        <p class="userLocation">Tel Aviv, Israel</p>
+        <p class="about">Hello there! My name is Eden Gabay. I'm a student at BGU in Israel. I'm taking a course named 'Web' and this is part of my project. XOXO</p>
+        <a href="../Html/Chats.html" class="message-me-button">Message Me</a>
+    </div>
+    <div class="profile-main">
+        <ul class="tabs">
+            <li><a href="SwapHistory.html">Swap History</a></li>
+            <li><a href="Wishlist.html">Wishlist</a></li>
+        </ul>
+        <div class="swappable-books">
+            <h3>Books to Swap</h3>
+            <div id="booksToSwap" class="books-grid">
+                <div class="book-item">
+                    <img src="../img/EragonBook.jpg" alt="Book 1 Cover" class="book-cover">
+                    <h3 class="book-title">Eragon</h3>
+                    <p class="book-author">Christopher Paolini</p>
+                    <a href="BookDetails.html" class="details-button">Book Details</a>
+                </div>
+                <div class="book-item">
+                    <img src="../img/Mockingjay.jpg" alt="Book 2 Cover" class="book-cover">
+                    <h3 class="book-title">Mockingjay</h3>
+                    <p class="book-author">Suzanne Collins</p>
+                    <a href="BookDetails.html" class="details-button">Book Details</a>
+                </div>
+                <div class="book-item">
+                    <img src="../img/Dune.jpg" alt="Book 3 Cover" class="book-cover">
+                    <h3 class="book-title">Dune</h3>
+                    <p class="book-author">Frank Herbert</p>
+                    <a href="BookDetails.html" class="details-button">Book Details</a>
+                </div>
             </div>
-            <h2>Eden Gabay</h2>
-            <p>Tel Aviv, Israel</p>
-            <button class="edit-profile-button">Edit Profile</button>
-            <p class="about">Hello there! My name is Eden Gabay. I'm a student at BGU in Israel. I'm taking a course named 'Web' and this is part of my project. XOXO</p>
-            <button class="message-me-button">Message Me</button>
         </div>
-        <div class="profile-main">
+    </div>
+</section>
 
-            <ul class="tabs">
-                <li><a href="SwapHistory.html">Swap History</a></li>
-                <li><a href="Wishlist.html">Wishlist</a></li>
-            </ul>
-
-          <div class="swappable-books">
-             <h3>Books to Swap</h3>
-             <div id="booksToSwap" class="books-grid">
-             </div>
-          </div>
-
+<footer>
+    <div class="footer-container">
+        <p>BookHive ©</p>
+        <p>Your Favorite Book Swapping Community Since 2024!</p>
+        <div class="footer-links">
+            <a href="../Html/ContactUs.html">Help</a>
+            <a href="../Html/FAQ.html">FAQ</a>
+            <a href="../Html/ContactUs.html">Contact Us</a>
         </div>
-    </section>
-
-    <footer>
-        <div class="footer-container">
-            <p>BookHive ©</p>
-            <p>Your Favorite Book Swapping Community Since 2024!</p>
-            <div class="footer-links">
-                <a href="../Html/Help.html">Help</a>
-                <a href="../Html/FAQ.html">FAQ</a>
-                <a href="../Html/ContactUs.html">Contact Us</a>
-            </div>
-        </div>
-    </footer>
+    </div>
+</footer>
 
 <script src="../JavaScript/Books.js"></script>
 <script src="../JavaScript/UserProfile.js"></script>

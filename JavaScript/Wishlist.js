@@ -39,15 +39,16 @@ function validateFormFields() {
 function addBookToWishlist() {
     const title = document.getElementById('bookTitle').value;
     const author = document.getElementById('bookAuthor').value;
-    const coverUrl = document.getElementById('bookCover').value || 'placeholder-image-url.jpg'; // Provide a default cover URL
+    const coverUrl = document.getElementById('bookCover').value || 'placeholder-image-url.jpg'; // Provide a default cover URL if none is provided
 
-    // Construct the new book HTML
+    // Construct the new book HTML with the "Book Details" button
     const newBookHtml = `
         <div class="book">
             <img src="${coverUrl}" alt="${title}" class="book-cover">
             <div class="book-info">
                 <h3 class="book-title">${title}</h3>
                 <p class="book-author">${author}</p>
+                <a href="BookDetails.html" class="details-button">Book Details</a>
             </div>
         </div>
     `;

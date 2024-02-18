@@ -1,4 +1,3 @@
-/* General reset and font import */
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +19,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
+    padding: 20px 5%; /* Adjusted padding for responsiveness */
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 100%;
@@ -28,7 +27,7 @@ header {
 }
 
 header h1 {
-    font-size: 40px;
+    font-size: calc(1.5rem + 1vw); /* Slightly responsive font size */
     font-weight: bold;
     color: #000000;
 }
@@ -59,10 +58,11 @@ nav ul li a:focus {
 
 /* Container styles */
 .container {
-    width: calc(100% - 40px);
+    width: 100%;
     max-width: 1200px;
     margin: auto;
     display: flex;
+    justify-content: center; /* Centering content */
     box-shadow: none;
 }
 
@@ -72,6 +72,7 @@ nav ul li a:focus {
     background-image: url('../img/BooksLogin.png');
     background-size: cover;
     background-position: center;
+    min-width: 50%; /* Maintain minimum width */
 }
 
 /* Hide the white BookHive text */
@@ -81,15 +82,16 @@ nav ul li a:focus {
 
 /* Right side styles */
 .right-side {
-    width: 50%;
-    padding: 40px;
+    flex: 1; /* Adjusted to maintain equal width with left side */
+    padding: 40px; /* Adjusted padding for responsiveness */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 50%; /* Maintain maximum width */
 }
 
 .right-side h1 {
-    font-size: 60px;
+    font-size: calc(2rem + 1vw); /* Slightly responsive font size */
     font-weight: bold;
     color: #080a0b;
     text-align: center;
@@ -98,7 +100,7 @@ nav ul li a:focus {
 
 .right-side h2.subheader {
     text-align: center;
-    font-size: 18px;
+    font-size: calc(0.8rem + 0.5vw); /* Slightly responsive font size */
     color: #555;
     font-weight: lighter;
     margin-top: 0;
@@ -134,7 +136,7 @@ button.loginButton {
     background-color: #76491b;
     color: #fff;
     padding: 15px;
-    font-size: 18px;
+    font-size: calc(0.8rem + 0.5vw); /* Slightly responsive font size */
     margin-top: 30px;
     border: none;
     border-radius: 5px;
@@ -149,7 +151,7 @@ button.loginButton {
 
 .signup p {
     color: #555;
-    font-size: 14px;
+    font-size: calc(0.8rem + 0.2vw); /* Slightly responsive font size */
 }
 
 .signup-link {
@@ -161,12 +163,12 @@ button.loginButton {
 footer {
     width: 100%;
     background-color: #f7f7f7;
-    padding: 20px 10%;
+    padding: 20px 5%; /* Adjusted padding for responsiveness */
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 14px;
+    font-size: calc(0.8rem + 0.2vw); /* Slightly responsive font size */
 }
 
 .footer-container {
@@ -190,7 +192,6 @@ footer {
 .footer-links a:hover {
     text-decoration: underline;
 }
-
 
 a {
     color: #333;

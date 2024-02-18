@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+    padding-bottom: 50px; /* Space for footer */
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #76491b;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #4f1f02;
+}
+.faq-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.faq-heading {
+    font-size: 50px;
+    color: black;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.faq-container table {
+    width: 100%;
+    border-collapse: separate;
+    margin: auto;
+    border-spacing: 0 15px;
+}
+
+.faq-container th, .faq-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    background-color: #fff;
+}
+
+.faq-container th {
+    background-color: #b7a07c;
+}
+
+.faq-container tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+footer {
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 20px 10%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-container p {
+    margin: 0;
+    color: #333;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

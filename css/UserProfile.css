@@ -82,27 +82,33 @@ nav ul li a:focus {
     margin-bottom: 20px;
 }
 
-.edit-profile-button,
+.userLocation {
+    margin-bottom: 35px; /* Adjust this value to create the desired gap */
+}
+
+/* Style for the about section */
+.about {
+    text-align: center;
+    margin-bottom: 40px; /* Added more space below the about section */
+}
+
+/* Message Me button adjusted to be a link */
 .message-me-button {
+    display: block; /* Make the link a block to fill the container */
+    width: max-content; /* Adjust the width to fit the content */
     padding: 10px 20px;
-    margin: 10px 0;
+    margin: 40px auto; /* Increased space above and centered the button */
     color: #fff;
     background: #76491b;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    text-align: center; /* Center text inside the button */
+    text-decoration: none; /* Remove underline from the link */
     transition: background 0.3s ease;
 }
 
-.edit-profile-button:hover,
 .message-me-button:hover {
     background: #4f1f02;
-}
-
-.edit-profile-button {
-    background: #fff;
-    color: #76491b;
-    border: 2px solid #76491b;
 }
 
 /* Tabs and additional content styles */
@@ -145,35 +151,62 @@ nav ul li a:focus {
 
 .books-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Increased min size */
+    gap: 20px; /* Adjust the gap size as needed */
     padding: 0;
+    margin: 0 auto; /* Center the grid if desired */
 }
 
 .book-item {
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 10px; /* Or adjust as needed */
     background: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This will space out the image and text within the item */
 }
 
 .book-cover {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    margin-bottom: 8px;
+    width: 100%; /* Full width of the container */
+    height: auto; /* Height is set to auto to maintain aspect ratio */
+    max-height: 200px; /* Set a max-height that works with your grid */
+    object-fit: contain; /* This will ensure the image fits without cropping */
+    margin-bottom: 8px; /* Maintain margin below the image */
 }
 
 .book-title {
-    font-size: 16px;
+    font-size: 1em; /* Start with a base font size */
     color: #000;
     margin-bottom: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    white-space: nowrap; /* This will prevent the text from wrapping */
+    width: 100%; /* Ensure the width fits the parent container */
+    box-sizing: border-box;
 }
+
 
 .book-author {
     font-size: 14px;
     color: #555;
+}
+
+.details-button {
+    display: inline-block;
+    background-color: #76491b; /* Adjust as needed */
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px; /* Space from the author name */
+    font-size: 14px; /* Adjust as needed */
+}
+
+.details-button:hover {
+    background-color: #4f1f02; /* Darker on hover */
 }
 
 footer {

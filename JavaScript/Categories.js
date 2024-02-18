@@ -60,34 +60,48 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     // Function to create and return a book HTML element
-    function createBookHTML(book) {
-        let bookDiv = document.createElement('div');
-        bookDiv.className = 'book';
+function createBookHTML(book) {
+    let bookDiv = document.createElement('div');
+    bookDiv.className = 'book';
 
-        // Create and set up book cover image
-        let img = document.createElement('img');
-        img.src = book.imageSrc;
-        img.alt = book.altText;
-        img.className = 'book-cover';
+    // Create and set up book cover image
+    let img = document.createElement('img');
+    img.src = book.imageSrc;
+    img.alt = book.altText;
+    img.className = 'book-cover';
 
-        // Create and set up book info
-        let infoDiv = document.createElement('div');
-        infoDiv.className = 'book-info';
-        let titleH3 = document.createElement('h3');
-        titleH3.className = 'book-title';
-        titleH3.textContent = book.title;
-        let authorP = document.createElement('p');
-        authorP.className = 'book-author';
-        authorP.textContent = book.author;
+    // Create and set up book info
+    let infoDiv = document.createElement('div');
+    infoDiv.className = 'book-info';
+    let titleH3 = document.createElement('h3');
+    titleH3.className = 'book-title';
+    titleH3.textContent = book.title;
+    let authorP = document.createElement('p');
+    authorP.className = 'book-author';
+    authorP.textContent = book.author;
 
-        // Append elements to bookDiv
-        infoDiv.appendChild(titleH3);
-        infoDiv.appendChild(authorP);
-        bookDiv.appendChild(img);
-        bookDiv.appendChild(infoDiv);
+    // Create and set up the "Book Details" button
+    let detailsButton = document.createElement('a');
+    detailsButton.className = 'details-button';
+    detailsButton.textContent = 'Book Details';
+    detailsButton.href = 'BookDetails.html'; // Link to your Book Details page
+    detailsButton.style.display = 'block'; // Optional: Style the button (could also be done in CSS)
+    detailsButton.style.marginTop = '10px';
+    detailsButton.style.textDecoration = 'none';
+    detailsButton.style.backgroundColor = '#a87a4c';
+    detailsButton.style.color = 'white';
+    detailsButton.style.padding = '10px 15px';
+    detailsButton.style.borderRadius = '5px';
 
-        return bookDiv;
-    }
+    // Append elements to bookDiv
+    infoDiv.appendChild(titleH3);
+    infoDiv.appendChild(authorP);
+    bookDiv.appendChild(img);
+    bookDiv.appendChild(infoDiv);
+    bookDiv.appendChild(detailsButton); // Append the "Book Details" button
+
+    return bookDiv;
+}
 
     // Function to render books based on category
     function displayBooksByCategory(category) {

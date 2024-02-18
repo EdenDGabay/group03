@@ -11,26 +11,12 @@ html, body {
     margin: 0;
 }
 
-.main-content {
-    min-height: calc(100% - 40px);
-    padding-bottom: 40px;
-}
-
-/* Same footer styles as before */
-
-
-body {
-    background-color: #f7f7f7;
-    color: #333;
-    line-height: 1.6;
-}
-
 /* Header styles */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
+    padding: 20px 5%;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 100%;
@@ -41,15 +27,22 @@ header h1 {
     font-size: 40px;
     font-weight: bold;
     color: #000000;
+    margin: 0;
 }
 
 nav ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
     display: inline;
     margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
 }
 
 nav ul li a {
@@ -69,7 +62,7 @@ nav ul li a:focus {
 
 /* Signup container styles */
 .signup-container {
-    max-width: 500px; /* Increased width */
+    max-width: 500px;
     margin: 40px auto;
     padding: 20px;
     background: #fff;
@@ -93,23 +86,36 @@ nav ul li a:focus {
 .signup-container form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="date"] {
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    width: 80%; /* Adjusted width */
+    max-width: 400px; /* Adjusted max width */
 }
 
-/* Terms agreement styles */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus {
+    outline: none;
+    border-color: #76491b;
+}
+
 .terms {
     display: flex;
     align-items: center;
     margin-top: 20px;
+    margin-bottom: 20px; /* Add margin bottom */
 }
 
 .terms input[type="checkbox"] {
@@ -118,14 +124,15 @@ input[type="date"] {
 
 /* Button styles */
 button {
-    padding: 15px;
+    padding: 15px 30px;
     background-color: #76491b;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 30px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Add margin bottom */
 }
 
 button:hover {
@@ -147,48 +154,3 @@ button:hover {
 .login-link a:hover {
     color: #76491b;
 }
-
-
-footer {
-    width: 100%;
-    background-color: #f7f7f7;
-    padding: 20px 10%;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.footer-container p {
-    margin: 0;
-    color: #333;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: #333;
-    margin-left: 20px;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-
-a {
-    color: #333;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-

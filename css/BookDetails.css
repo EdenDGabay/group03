@@ -1,10 +1,14 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: Lexend, sans-serif;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body, html {
+    font-family: 'Lexend', sans-serif;
+}
+
+/* Header styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -12,11 +16,12 @@ header {
     padding: 20px 10%;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
 }
 
 header h1 {
     font-size: 40px;
-  font-weight: bold;
+    font-weight: bold;
     color: #000000;
 }
 
@@ -44,76 +49,84 @@ nav ul li a:focus {
     background-color: #4f1f02;
 }
 
+/* Headline section styles */
 .headline-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  background-color: #a47855;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #a47855;
 }
 
 .headline-section h2 {
-  font-size: 3em;
-  color: #ffffff;
-  margin: 0;
+    font-size: 3em;
+    color: #ffffff;
 }
 
+/* Main container styles */
 .container {
-  display: flex;
-  width: 100vw;
-  height: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 1200px;
 }
 
+/* Image section styles */
 .image-section {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .responsive-image {
-  max-width: 100%;
-  height: auto;
-  max-height: 100vh;
+    max-width: 100%;
+    height: auto;
 }
 
-
+/* Content section styles */
 .content-section {
-  flex: 1;
-  padding: 50px;
-  background: #f8f8f8;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    flex: 2;
+    min-width: 300px;
+    padding: 50px;
+    background: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1, h2, .intro, p {
+    margin-bottom: 20px;
 }
 
 h1 {
-  font-size: 48px;
-  color: #333;
+    font-size: 48px;
+    color: #333;
 }
 
 h2 {
-  font-size: 24px;
-  color: #555;
+    font-size: 24px;
+    color: #555;
 }
 
 .intro {
-  font-size: 20px;
-  font-weight: bold;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 p {
-  font-size: 16px;
-  color: #666;
-  line-height: 1.6; /
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
 }
 
+/* Footer styles */
 footer {
     width: 100%;
     background-color: #f7f7f7;
     padding: 20px 10%;
-    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -127,21 +140,18 @@ footer {
     width: 100%;
 }
 
-.footer-container p {
-    margin: 0;
+.footer-container p, .footer-links a {
     color: #333;
 }
 
 .footer-links a {
     text-decoration: none;
-    color: #333;
     margin-left: 20px;
 }
 
 .footer-links a:hover {
     text-decoration: underline;
 }
-
 
 a {
     color: #333;
@@ -150,4 +160,83 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 992px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .image-section, .content-section {
+        width: 100%;
+    }
+
+    .headline-section h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .image-section, .content-section {
+        width: 100%;
+    }
+
+    .headline-section h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1,
+    nav ul li a,
+    .headline-section h2 {
+        font-size: smaller; /* Adjust font sizes for smaller screens */
+    }
+
+    h1#bookTitle {
+        font-size: min(max(24px, 5vw), 32px); /* Ensures font size is between 24px and 32px */
+    }
+
+    h2#bookAuthor {
+        font-size: min(max(18px, 3.5vw), 24px); /* Ensures font size is between 18px and 24px */
+    }
+
+    p#bookDescription {
+        font-size: min(max(16px, 2vw), 20px); /* Ensures font size is between 16px and 20px */
+    }
+
+    .content-section,
+    .footer-container {
+        padding: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

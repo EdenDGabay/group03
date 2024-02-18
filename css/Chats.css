@@ -55,7 +55,7 @@ nav ul li a:focus {
 
 .sidebar {
   width: 250px;
-  background-color: rgb(252, 222, 192);
+  background-color: #bd8766;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -69,7 +69,7 @@ nav ul li a:focus {
   background-color: #76491b;
   padding: 20px;
   width: 100%;
-  text-align: center;
+  text-align: left;
     text-shadow:
     -1px -1px 0 #000,
      1px -1px 0 #000,
@@ -116,11 +116,11 @@ nav ul li a:focus {
 .chat-header {
   padding: 20px;
   border-bottom: 1px solid #ccc;
-  background-color: #c68b59;
+  background-color: #e5a17a;
 }
 
 .chat-header h1 {
-  font-size: 22px;
+  font-size: 40px;
   color: white;
 }
 
@@ -155,6 +155,7 @@ nav ul li a:focus {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  color: white;
 }
 
 .send-button:hover {
@@ -207,4 +208,95 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column; /* Stack sidebar and chat vertically on smaller screens */
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar takes full width */
+        height: auto; /* Adjust height to content, removing fixed height to allow flexible content height */
+    }
+
+    .chat {
+        width: 100%; /* Chat takes full width */
+        height: auto; /* Allow chat to take necessary height based on its content */
+        overflow-y: auto; /* Add scroll to chat if content overflows */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjustments for smaller devices */
+    header, .chat-header, .chat-footer, .message-input, .send-button {
+        flex-direction: column;
+    }
+
+    .message-input, .send-button {
+        width: 100%; /* Adjust width for smaller screens */
+        padding: 10px; /* Adjust padding */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .chat-footer {
+        gap: 5px; /* Reduce gap for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1, .chat-header h1, .chat-header p {
+        font-size: smaller;
+    }
+
+    .nav-link, .chat-header, .message-item, .time {
+        padding: 5px;
+    }
+
+    .sidebar, .chat {
+        padding: 0; /* Maximize space utilization */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header, .chat-header, .chat-footer, .message-input, .send-button {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .message-input, .send-button {
+        width: 100%; /* Input and button take full width */
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    nav ul li {
+        display: block; /* Stack nav items vertically */
+        margin: 10px 0; /* Add some margin between items */
+    }
+
+    .chat-footer {
+        gap: 5px; /* Reduce gap in chat footer */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1, .chat-header h1, .chat-header p {
+        font-size: smaller; /* Reduce font size for very small screens */
+    }
+
+    .nav-link, .chat-header, .message-item, .time {
+        padding: 5px; /* Reduce padding to fit content */
+    }
+
+    .sidebar, .chat {
+        padding: 0; /* Remove padding to maximize available space */
+    }
+}
+
+footer, .footer-container, .footer-links a {
+    padding: 10px; /* Adjust padding for smaller screens */
+    font-size: 12px; /* Adjust font size for readability */
 }

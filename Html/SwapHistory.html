@@ -13,70 +13,58 @@
 
 <header>
     <h1>BookHive</h1>
-      <nav>
-       <ul>
-        <li><a href="HomePage.html">Home</a></li>
-         <li><a href="UserProfile.html">Profile</a></li>
-         <li><a href="Chats.html">Chats</a></li>
-      </ul>
+    <nav>
+        <ul>
+            <li><a href="HomePage.html">Home</a></li>
+            <li><a href="UserProfile.html">Profile</a></li>
+            <li><a href="Chats.html">Chats</a></li>
+        </ul>
     </nav>
-  </header>
+</header>
 
-    <div class="swap-history">
-        <div class="swap-history-header">
-            <h2>Swap History</h2>
+<div class="swap-history">
+    <div class="swap-history-header">
+        <h2>Swap History</h2>
+        <div class="swap-count">
+            Books Swapped: <span id="booksSwappedCount">0</span>
         </div>
-
-<table class="swap-table">
-  <thead>
-    <tr>
-      <th>Swap Number</th>
-      <th>Swap Date</th>
-      <th>Swapped With</th>
-      <th>Book's Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>01</td>
-      <td>03 March 2022</td>
-      <td>Jacob Wilkins</td>
-      <td>Best Book</td>
-    </tr>
-    <tr>
-      <td>02</td>
-      <td>15 Oct 2021</td>
-      <td>Laura Keith</td>
-      <td>Best Book Ever</td>
-    </tr>
-    <!-- Add more rows as needed -->
-  </tbody>
-</table>
     </div>
+
+    <table class="swap-table">
+        <thead>
+            <tr>
+                <th>Swap Number</th>
+                <th>Swap Date</th>
+                <th>Swapped With</th>
+                <th>Book's Name</th>
+            </tr>
+        </thead>
+        <tbody id="swapHistoryBody">
+        </tbody>
+    </table>
+</div>
 
 <div class="center-container">
     <button id="addSwapButton">Add Swap</button>
-
     <div id="newSwapForm" style="display:none;">
-      <input type="text" id="swapNumber" placeholder="Swap Number" disabled>
-      <input type="date" id="swapDate" placeholder="Swap Date" required>
-      <input type="text" id="swappedWith" placeholder="Swapped With" required>
-      <input type="text" id="bookName" placeholder="Book's Name" required>
-    <!-- The onclick here calls the submitNewSwap function -->
-      <button onclick="submitNewSwap()">Submit New Swap</button>
+        <input type="text" id="swapNumber" placeholder="Swap Number" disabled>
+        <input type="date" id="swapDate" placeholder="Swap Date" required>
+        <input type="text" id="swappedWith" placeholder="Swapped With" required>
+        <input type="text" id="bookName" placeholder="Book's Name" required>
+        <button type="button" onclick="submitNewSwap()">Submit New Swap</button>
     </div>
 </div>
 
 <footer>
-  <div class="footer-container">
-    <p>BookHive ©</p>
-    <p>Your Favorite Book Swapping Community Since 2024!</p>
-    <div class="footer-links">
-        <a href="../Html/Help.html">Help</a>
-        <a href="../Html/FAQ.html">FAQ</a>
-        <a href="../Html/ContactUs.html">Contact Us</a>
+    <div class="footer-container">
+        <p>BookHive ©</p>
+        <p>Your Favorite Book Swapping Community Since 2024!</p>
+        <div class="footer-links">
+            <a href="../Html/ContactUs.html">Help</a>
+            <a href="../Html/FAQ.html">FAQ</a>
+            <a href="../Html/ContactUs.html">Contact Us</a>
+        </div>
     </div>
- </div>
 </footer>
 
 <script src="../JavaScript/Books.js"></script>
