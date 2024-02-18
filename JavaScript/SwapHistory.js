@@ -7,7 +7,7 @@ function displaySwaps() {
     const swapTableBody = document.getElementById('swapHistoryBody');
   swapTableBody.innerHTML = `
         <tr>
-            <td>01</td>
+            <td>0</td>
             <td>01 Jan 2022</td>
             <td>Sample Swapper</td>
             <td>Example Book Title</td>
