@@ -1,14 +1,14 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
     displaySwaps();
     updateCounts();
 });
 
-function displaySwaps() {
+const displaySwaps = () => {
     const swapTableBody = document.getElementById('swapHistoryBody');
-  swapTableBody.innerHTML = `
+    swapTableBody.innerHTML = `
         <tr>
             <td>0</td>
-            <td>01 Jan 2022</td>
+            <td>2024-01-01</td>
             <td>Sample Swapper</td>
             <td>Example Book Title</td>
         </tr>
@@ -28,27 +28,27 @@ function displaySwaps() {
             swapTableBody.appendChild(row);
         }
     }
-}
+};
 
-function updateCounts() {
+const updateCounts = () => {
     const staticExamplesCount = 1;
     const dynamicSwapsCount = parseInt(localStorage.getItem('booksSwappedCount') || 0);
     const totalCount = staticExamplesCount + dynamicSwapsCount;
     document.getElementById('booksSwappedCount').textContent = totalCount;
-}
+};
 
-function addSwap() {
+const addSwap = () => {
     let currentCount = parseInt(localStorage.getItem('booksSwappedCount') || 0);
     localStorage.setItem('booksSwappedCount', currentCount + 1);
     updateCounts();
-}
+};
 
-document.getElementById('addSwapButton').addEventListener('click', function() {
+document.getElementById('addSwapButton').addEventListener('click', () => {
     document.getElementById('newSwapForm').style.display = 'block';
     document.getElementById('swapNumber').value = parseInt(localStorage.getItem('lastSwapNumber') || '0') + 1;
 });
 
-function submitNewSwap() {
+const submitNewSwap = () => {
     const swapNumber = document.getElementById('swapNumber').value;
     const swapDate = document.getElementById('swapDate').value;
     const swappedWith = document.getElementById('swappedWith').value;
@@ -67,25 +67,25 @@ function submitNewSwap() {
     resetFormFields();
 
     displaySwaps();
-}
+};
 
-function resetFormFields() {
+const resetFormFields = () => {
     document.getElementById('swapNumber').value = '';
     document.getElementById('swapDate').value = '';
     document.getElementById('swappedWith').value = '';
     document.getElementById('bookName').value = '';
-}
+};
 
-function validateTextFields(swapDate, swappedWith, bookName) {
+const validateTextFields = (swapDate, swappedWith, bookName) => {
     const validTextRegex = /^[a-zA-Z\s,'-]+$/;
     if (!swapDate || !validTextRegex.test(swappedWith) || !validTextRegex.test(bookName)) {
         alert("Please enter valid values in all fields.");
         return false;
     }
     return true;
-}
+};
 
-document.getElementById('newSwapForm').addEventListener('submit', function(event) {
+document.getElementById('newSwapForm').addEventListener('submit', (event) => {
     event.preventDefault();
     submitNewSwap();
 });

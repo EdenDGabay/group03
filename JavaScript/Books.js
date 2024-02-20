@@ -46,7 +46,7 @@ function createBookItem(book) {
 function renderSwappableBooks() {
     const booksGrid = document.getElementById('booksToSwap');
     if (!booksGrid) {
-        console.error('The #booksToSwap element does not exist on this page.');
+        console.error('The book does not exist on this page.');
         return;
     }
     swappableBooks.forEach(function(book) {

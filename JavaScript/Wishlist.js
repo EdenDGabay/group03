@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('showAddBookForm').addEventListener('click', function() {
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById('showAddBookForm').addEventListener('click', () => {
         document.getElementById('addBookForm').style.display = 'block';
     });
 
-    document.getElementById('addBookForm').addEventListener('submit', function(event) {
+    document.getElementById('addBookForm').addEventListener('submit', (event) => {
         event.preventDefault();
 
         if (validateFormFields()) {
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-function validateFormFields() {
+const validateFormFields = () => {
     const title = document.getElementById('bookTitle').value;
     const author = document.getElementById('bookAuthor').value;
     const coverUrl = document.getElementById('bookCover').value;
@@ -30,9 +30,9 @@ function validateFormFields() {
     }
 
     return true;
-}
+};
 
-function addBookToWishlist() {
+const addBookToWishlist = () => {
     const title = document.getElementById('bookTitle').value;
     const author = document.getElementById('bookAuthor').value;
     const coverUrl = document.getElementById('bookCover').value || 'placeholder-image-url.jpg'; // Provide a default cover URL
@@ -53,12 +53,12 @@ function addBookToWishlist() {
     document.getElementById('bookAuthor').value = '';
     document.getElementById('bookCover').value = '';
     document.getElementById('addBookForm').style.display = 'none';
-}
+};
 
-function updateCounts() {
+const updateCounts = () => {
     document.getElementById('wishlistCount').textContent = localStorage.getItem('wishlistCount') || 0;
-}
+};
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
     updateCounts();
 });

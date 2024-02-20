@@ -55,6 +55,11 @@ nav ul li a:focus {
     padding: 20px 0;
 }
 
+.swap-history h2 {
+  background-color: #e7c0aa;
+  font-size: 60px;
+}
+
 .swap-history-header {
     font-size: 30px;
     color: #333;
