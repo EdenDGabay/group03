@@ -100,7 +100,7 @@ nav ul li a:focus {
   box-sizing: border-box;
 }
 
-/*The chosen chat*/
+
 .nav-link.active {
   color: black;
   background-color: #76491b;
@@ -108,14 +108,14 @@ nav ul li a:focus {
 
 .chat {
   flex-grow: 1;
-  background-color: white;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
 }
 
 .chat-header {
   padding: 20px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ffd3af;
   background-color: #e5a17a;
 }
 
@@ -137,7 +137,7 @@ nav ul li a:focus {
 
 .chat-footer {
   padding: 20px;
-  background: #f0f0f0;
+  background: #ffcda4;
   display: flex;
   gap: 10px;
 }
@@ -156,6 +156,7 @@ nav ul li a:focus {
   border-radius: 4px;
   cursor: pointer;
   color: white;
+  font-weight: bold;
 }
 
 .send-button:hover {
